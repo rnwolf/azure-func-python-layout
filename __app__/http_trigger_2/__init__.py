@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """An example Azure Function triggered by an HTTP get or post."""
 import logging
 import azure.functions as func

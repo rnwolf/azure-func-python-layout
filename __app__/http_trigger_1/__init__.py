@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """An example Azure Function triggered by an HTTP get or post."""
 # __app__\http_trigger_2\__init__.py
 import logging

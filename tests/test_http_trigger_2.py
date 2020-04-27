@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Test the http_trigger_2 Azure function."""
 # tests/test_http_trigger_2.py
 
@@ -5,10 +7,13 @@ import azure.functions as func
 from __app__.http_trigger_2 import main
 
 
+TRIGGER_URL = "/api/http_trigger_2"
+
+
 def test_func_for_user_names_via_params():
     """Construct a mock HTTP request."""
     req = func.HttpRequest(
-        method="POST", body=None, url="/api/HttpTrigger1", params={"name": "Test"}
+        method="POST", body=None, url=TRIGGER_URL, params={"name": "Test"}
     )
 
     # Call the function.
@@ -21,7 +26,7 @@ def test_func_for_user_names_via_params():
 def test_func_for_user_names_via_body():
     """Construct a mock HTTP request."""
     req = func.HttpRequest(
-        method="POST", body=b'{"name":"Test"}', url="/api/HttpTrigger1", params={}
+        method="POST", body=b'{"name":"Test"}', url=TRIGGER_URL, params={}
     )
 
     # Call the function.
@@ -33,7 +38,7 @@ def test_func_for_user_names_via_body():
 
 def test_func_for_no_name():
     """Construct a mock HTTP request."""
-    req = func.HttpRequest(method="POST", body=None, url="/api/HttpTrigger1", params={})
+    req = func.HttpRequest(method="POST", body=None, url=TRIGGER_URL, params={})
 
     # Call the function.
     resp = main(req)
