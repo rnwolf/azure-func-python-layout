@@ -12,7 +12,7 @@ on:
 
 # Notes on how to set ENV vars for multiple jobs. https://github.com/actions/starter-workflows/issues/68
 env:
-  APP_NAME: rnwolfapp3
+  APP_NAME: rnwolfmulti3
   APP_LOCATION: __app__
   PYTHON_VERSION: "3.8"
 
