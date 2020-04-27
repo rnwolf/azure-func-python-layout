@@ -1,0 +1,13 @@
+POST http://localhost:7071/api/http_trigger_2?name=Test
+#content-type: application/json
+
+#{
+#    "name": "Test"
+#}
+
+#POST https://<APP-NAME>.azurewebsites.net/api/httptrigger2?code=<FUNC CODE>&name=Test
+#content-type: application/json
+
+#{
+#    "name": "Test"
+#}

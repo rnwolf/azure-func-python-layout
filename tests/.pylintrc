@@ -1,0 +1,5 @@
+[LOGGING]
+
+# Format style used to check logging format string. `old` means using %
+# formatting, while `new` is for `{}` formatting.
+logging-format-style=new
