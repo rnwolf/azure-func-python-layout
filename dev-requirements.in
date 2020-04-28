@@ -15,6 +15,10 @@ flake8-bandit
 flake8-bugbear
 flake8-deprecated
 flake8-executable
+flake8-black
 pylint
 rope
 hypothesis
+httpie
+pre-commit
+pre-commit-hooks

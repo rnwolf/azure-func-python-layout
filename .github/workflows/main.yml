@@ -38,7 +38,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r dev-requirements.txt
     - name: "Run tests"
-      run: python -m pytest --cov --cov-config=.coveragerc tests/
+      run: python -m pytest --cov --cov-config=.coveragerc ${{ env.APP_LOCATION }}
       env:
         PYTHONDEVMODE: 1
     - run: python -m coverage html
@@ -99,6 +99,6 @@ jobs:
         popd
     - uses: Azure/functions-action@v1
       with:
-        app-name: ${{ env.APP_NAME }} 
+        app-name: ${{ env.APP_NAME }}
         package: ${{ env.APP_LOCATION }}
         publish-profile: ${{ secrets.azureWebAppPublishProfile }}

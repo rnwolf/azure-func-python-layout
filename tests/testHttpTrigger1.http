@@ -1,1 +1,20 @@
+# Update variables and VSCode "REST Client" extention to test API on localhost or Azure.
+# Another alternative is to use python utility httpie via the Virtualenv terminal.
+# http :7071/api/http_trigger_1 name=Test
+
+@APP_NAME=rnwolfmulti3
+@FUNC_KEY_CODE=
+@TRIGGER_NAME=http_trigger_1
+
 POST http://localhost:7071/api/http_trigger_1?name=Test
+#content-type: application/json
+#{
+#    "name": "Test"
+#}
+
+
+#POST https://{{APP_NAME}}.azurewebsites.net/api/{{TRIGGER_NAME}}?code={{FUNC_KEY_CODE}}&name=Test
+#content-type: application/json
+#{
+#    "name": "Test"
+#

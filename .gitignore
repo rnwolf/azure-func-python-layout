@@ -23,6 +23,7 @@ appsettings.json
 local.settings.json
 .coverage
 .hypothesis
+azure-functions-core-tools
 
 node_modules
 dist

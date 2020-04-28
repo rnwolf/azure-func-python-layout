@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Shared functions that we can use in our Azure Fuctions can go here."""
 
 

@@ -1,0 +1,28 @@
+-   repo: local
+    hooks:
+    -   id: black
+        name: black
+        entry: black
+        language: system
+        types: [python]
+    -   id: check-case-conflict
+        name: Check case conflict
+        description: Check for files with names that would conflict on a case-insensitive filesystem.
+        entry: check-case-conflict
+        language: system
+        types: [python]
+    -   id: trailing-whitespace
+        name: Trim Trailing Whitespace
+        description: This hook trims trailing whitespace.
+        entry: trailing-whitespace-fixer
+        args: [--markdown-linebreak-ext=md]
+        language: python
+        types: [text]
+    -   id: mypy
+        name: mypy
+        entry: mypy
+        language: python
+        types: [python]
+        args: ["--ignore-missing-imports", "--scripts-are-modules"]
+        require_serial: true
+        additional_dependencies: []

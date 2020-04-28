@@ -4,7 +4,7 @@
 
 ## Overview
 
-I had some difficulty in getting the default Azure Functions working beyond the most trival case, as at April 2020.  
+I had some difficulty in getting the default Azure Functions working beyond the most trival case, as at April 2020.
 
 This repo is my best attempt at creating an example of two Azure Functions, based on HTTP Triggers that depend on some common shared code, with some automated pytests. I am using Insiders build of Windows 10 and VSCode.
 
@@ -14,16 +14,20 @@ I wanted to ensure that everything works via the terminal command line and/or vi
 
 You should be able copy the repo, rename it, create a Python virtualenv in the root directory, update pip & install pip-tools, activate venv and then be ready to proceed on your own.
 
-There is a github workflow that will run some quality checks, 
+Initialise the pre-commit githook with ```pre-commit install```.  The pre-commit will use black to auto-format python files, remove trailing whitespace and check that you use case insensitive file names.
 
-- 100% test coverage, 
-- black formatting, 
+There is a github workflow that will run some quality checks,
+
+- 100% test coverage,
+- black formatting,
 - packages checked for security safety
 - mypy type checking
 
-and then deploy to Azure. 
+and then deploy to Azure.
 
-You will need you to create/download a "publish profile" which must be added as Github repo secret in order for the workflow to deploy to Azure.
+To check your test coverage with ```python -m pytest --cov --cov-config=.coveragerc __app__```. Or ```coverage run -m pytest --cov __app__/```
+
+For the github workflow to work you will need you to create/download a "publish profile" which must be added as Github repo secret in order for the workflow to deploy to Azure.
 
 ## Helper utilities
 
@@ -43,7 +47,7 @@ I've included a number of utilities such as:
 
 
 Update the dev-requirements.in and requirements.txt file with the python packages that you need/want in dev and production.
-Activate virtualenv and then generate ```pip-compile -r dev-requirements.in```  
+Activate virtualenv and then generate ```pip-compile -r dev-requirements.in```
 Install packages with ```pip install -r dev-requirements.txt```
 
 ## Tree view of the essental directories and files
