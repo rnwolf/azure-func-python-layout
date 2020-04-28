@@ -1,6 +1,8 @@
+Dependencies scanned by PyUp.io
+[![Updates](https://pyup.io/repos/github/pyupio/safety/shield.svg)](https://pyup.io/repos/github/pyupio/safety/)
+
 # README
 
-[ ~ Dependencies scanned by PyUp.io ~ ]
 
 ## Overview
 
